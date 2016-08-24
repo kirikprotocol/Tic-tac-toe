@@ -1,0 +1,8 @@
+<project name="build" default="build" basedir=".">
+  <property file="${basedir}/version.properties"/>
+  <include file="${basedir}/${project.path}/build-tools.xml" as="tools"/>
+  <target name="build" depends="tools.groovy_build"/>
+  <target name="distr" depends="tools.clear_ivy_cache, tools.resolve, tools.groovy_build, tools.prepare_exploded">
+    <antcall target="tools.pack_war"/>
+  </target>
+</project>

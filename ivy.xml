@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://ant.apache.org/ivy/maven.xsd" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info organisation="mobi.eyeline.mobi.bots" module="game15"/>
+    <!--publications>
+        <artifact type="source" ext="zip" name="game15-sources"/>
+        <artifact type="javadoc" ext="zip" name="game15-javadoc"/>
+        <artifact type="jar" ext="jar" name="game15"/>
+    </publications-->
+    
+    <dependencies>
+        <dependency org="log4j" name="log4j" rev="1.2.+" transitive="false"/>
+        <dependency org="javax.el"          name="javax.el-api"          rev="3.0.0" conf="default"/>
+        <dependency org="javax.servlet"     name="javax.servlet-api"     rev="3.1.0" conf="default"/>
+        <dependency org="javax.servlet.jsp" name="javax.servlet.jsp-api" rev="2.3.1" conf="default"/>
+
+        <dependency org="org.codehaus.groovy" name="groovy-all" rev="2.4.3" conf="default">
+            <artifact name="groovy-all" type="jar" ext="jar" m:classifier="indy" conf="default"/>
+        </dependency>
+    </dependencies>
+</ivy-module>
